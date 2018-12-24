@@ -1,0 +1,40 @@
+html, body {
+  /* ensure that all of the viewport is used */
+  width: 100%;
+  height: 100%;
+  /* ensure that no scrollbars appear */
+  margin: 0;
+  padding: 0;
+
+  /* center SVG horizontally and vertically */
+ /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #f9f9f9;
+}
+
+
+.sky {
+  background-color: #00002b;
+  text-align: center;
+}
+
+#greetings {
+  color: lightyellow;
+  padding-top: 4em;
+}
+
+.ground {
+  background-color: #f9f9f9;
+  min-height: 200px;
+  width:100%;
+}
+
+#tree {
+  /* set some maximum size (width and height need to match
+   * aspect ratio, 1:1 in this case */
+}
+
+.bottom {
+  vertical-align: bottom;
+}
