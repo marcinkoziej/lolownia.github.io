@@ -1,0 +1,212 @@
+<tw-storydata name="Syria" startnode="3" creator="Twine" creator-version="2.3.1" ifid="4551AC29-0943-46A6-9EEA-4ED59FFB6CA2" zoom="1" format="SugarCube" format-version="2.28.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
+  font-family: "Star Medina";
+  src: url("https://go.cahoots.pl/syria/font/StarMedina.ttf");
+}
+/* fonts */
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4,
+nav#menu a {
+  font-family: "Star Medina", Impact, sans-serif;
+  font-weight: normal;
+}
+
+/* sizes */
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3, #story-title {
+  font-size: 2em;
+}
+
+nav#menu a {
+  font-size: 1.4em;
+}
+
+/* positioning */
+html, body, #story {
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* colors */
+body {
+  background-color: #070503;
+  color: #DCEAF2;
+}
+
+h1, h2, h3 {
+  text-shadow: 0px 0px 6px white;
+}
+
+#ui-bar {
+  background-color: #201c10;
+}
+
+#saves-list button,
+#saves-export,
+#saves-import {
+  background-color: #734F30;
+  border: 1px solid #b78152;
+}
+
+/* backgrounds */
+/* horizontal */
+#story.south-road-1 #story, #story.transport-station-1 #story {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#story.south-road-1 #story #passages > div, #story.transport-station-1 #story #passages > div {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 1em;
+}
+
+/* vertical */
+#story.szam-street-1 {
+  background-size: contain;
+  background-position: right top;
+}
+#story.szam-street-1 #passages {
+  margin: 0 auto 0 0;
+  max-width: 48em;
+}
+
+#story.transport-station-1 {
+  background-image: url("///home/marcin/Projects/lolownia.github.io/syria/img/transport-station-1.png");
+}
+
+#story.szam-street-1 {
+  background-image: url("///home/marcin/Projects/lolownia.github.io/syria/img/szam-street-1.png");
+}
+
+#story.south-road-1 {
+  background-image: url("///home/marcin/Projects/lolownia.github.io/syria/img/south-road-1.png");
+}
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+State.variables.known = {};
+State.variables.annoing = 0;
+State.variables.talkative = 0;
+State.variables.busTime = 0;
+
+UIBar.stow();
+
+
+</script><tw-passagedata pid="1" name="Gazi Antep" tags="" position="425,780" size="100,100">&lt;&lt;addclass &quot;#story&quot; &quot;transport-station-1&quot;&gt;&gt;
+
+!Gazi Antep
+
+You wake up. The heat is just promising.
+
+[[When will this ride end?|Aleppo]]
+
+!!Why
+
+Why am I here? Because I am heartbroken.
+
+!!!Who
+
+Doesn&#39;t matter. Yet this great trip was her idea I must admit.
+
+!!!!Me
+
+Am I noone? With no desire and no determination to lead? 
+
+I guess. Maybe. But I did realize this. I did go there. By myself.</tw-passagedata><tw-passagedata pid="2" name="Aleppo" tags="" position="670,779" size="100,100">You leave the service taxi.
+</tw-passagedata><tw-passagedata pid="3" name="The Border" tags="" position="153,42" size="100,100">!The Border
+
+I am in Istanbul. I came to [[Harem Bus Station]] to get to Syria. 
+</tw-passagedata><tw-passagedata pid="4" name="Backseat of the Bus to Gazi Antep" tags="" position="621,39" size="100,200">&lt;&lt;set $busTime += 1&gt;&gt;
+The bus is on its way, chugging through city traffic and gaining speed on the highways.
+
+&lt;&lt;if !$known[&#39;baris&#39;] &amp;&amp; random(5) &lt; $talkative&gt;&gt;
+ The neighbour asks me where I am from. He is interested who am I.
+ [[I tell him that I am a student|Backseat of the Bus to Gazi Antep][$known[&#39;baris&#39;] = true]]
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $known[&#39;baris&#39;]&gt;&gt;[[Talk to neighbour|Talk with Baris]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $busTime &gt; 4&gt;&gt;
+[[Fall asleep|Gazi Antep Bus Station]]
+&lt;&lt;else&gt;&gt;
+[[Fall asleep|Night Stop in Turkey]]
+&lt;&lt;/if&gt;&gt;
+
+[[Open Lonely Planet|Lonely Planet]]</tw-passagedata><tw-passagedata pid="5" name="Harem Bus Station Information" tags="" position="461,22" size="100,100">At the side of the Harem station, there is a small, barred information window with a group of women queueing. The first one is talking endlessly. The man behind glass can be hardly seen through timetables attached to it. 
+
+I try to bend to get a bit closer to him.
+
+&lt;&lt;linkreplace &quot;Interrupt her and get the officer&quot;&gt;&gt;
+The women in the front ignores me. Other waiting women turn their heads to me, only to get back to squizing around information. 
+&lt;&lt;set $annoying += 1&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;linkreplace &quot;Look into Lonely Planet&quot;&gt;&gt;
+Leafing through my blue guidebook, I notice //Cross border at Kilis// and scribbled //(through Gaziantep)//. [[I can wait until they call for it|Harem Bus Station]] 
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Harem Bus Station" tags="" position="324,23" size="100,200">It is almost 5pm and the tempereture of concrete beneath me is 50 degrees.
+
+– An-kara-an-kara-an-kara – shouts a man in the other corner of the station.
+&lt;&lt;linkreplace &quot;Follow the voice&quot; t8n&gt;&gt;
+The Harem central bus station is crowded with people and roaring automobiles.
+– Iz-mir-iz-mir-iz-mir-iz-mir-iz-mir!!! – another shout nearby.
+&lt;&lt;linkreplace &quot;Walk toward it&quot; t8n&gt;&gt;
+I push myself through the crowd. 80 litre backpack is slowing me down. At the same time, people do notice a stranger, and give me way. And stares.
+– ...-tep-an-tep-an-tep-an-tep-an-tep-an-tep – station officer continues his sing-along.
+This is really confusing and a feeling that I might miss the bus to Syria grows inside me. Some men look at me and try to ask or direct me, but probably assume I&#39;m heading for a tourist destination. I don&#39;t have much time.
+[[Try to look for information|Harem Bus Station Information]]
+[[Hurry to the source of the Antep shout|Board the Bus to Gazi Antep]]
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Night Stop in Turkey" tags="" position="750,146" size="100,100">The bus stops for 15 minutes.
+
+It&#39;s the middle of the night and really nothing to see.
+
+&lt;&lt;if $known[&#39;baris&#39;]&gt;&gt;
+Baris tells me that each such stop has a small praying room. 
+&lt;&lt;linkreplace &quot;I want to see it&quot;&gt;&gt;
+We go out of the bus and see a small praying building. Inside, there are carpets and simple set of furniture.
+[[Go back to bus|Backseat of the Bus to Gazi Antep]]
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+[[Go to toilette and come back|Backseat of the Bus to Gazi Antep]]</tw-passagedata><tw-passagedata pid="8" name="Lonely Planet" tags="" position="870,89" size="100,100">I&#39;m reading about Damascus. 
+A city where once there lived three great cultures: Judaism, Christian and Islam.
+&lt;&lt;if $talkative &lt; 2&gt;&gt;
+  &lt;&lt;set $talkative += 0.5&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;return &quot;Raise my head&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Board the Bus to Gazi Antep" tags="" position="458,163" size="100,100">– Gaziantep? Gaziantep? – I ask and the group of men nods, smiling. I put the bag to the cargo compartment pointed by one smoking a cigarette. How much? That much. 
+&lt;&lt;linkreplace &quot;I pay&quot;&gt;&gt;
+I am seated in the very end of the bus, with three other places already taken. 
+I squeeze to my place and drink some water.
+
+This ride is going to take all night, crossing through the middle of Turkey. 
+Too bad the hangings are closed.
+
+[[Ask the neighboar to open the courtains|Backseat of the Bus to Gazi Antep][$talkative += 1]]
+[[Tuck my backpuck under the sit better|Backseat of the Bus to Gazi Antep]]
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Talk with Baris" tags="" position="752,16" size="100,100">Baris tells me he is a doctor.
+He goes back to Gaziantep, his hometown.
+
+This city was once called Antep, but because of great courage displayed by its population in some war, it received a //Gazi// prefix. It means //Courageos//.
+
+He explais islam to me. So, just like christianity, the essential rule of Islam is to love other people and be good to them.
+
+He has a wife who is also still studying medicine. He is not happy that she can&#39;t cover her head in the university though. 
+
+&lt;&lt;return &quot;I&#39;m sleepy.&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Gazi Antep Bus Station" tags="" position="622,267" size="100,100">The bus window was dimmed hiding the brightness and heat of the morning sun. 
+Gaziantep Bus Station was small&lt;&lt;if $known[&#39;basir&#39;]&gt;&gt; and Baris already left, pointing you to a bunch of //service taxis//&lt;&lt;/if&gt;&gt;.
+
+
+</tw-passagedata></tw-storydata>
+
