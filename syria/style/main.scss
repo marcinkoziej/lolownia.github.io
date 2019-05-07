@@ -77,14 +77,12 @@ $img-base: "https://go.cahoots.pl/syria/img";
 
 /* horizontal */
 %horizontal-cover {
-  #story {
-    background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
-    #passages > div {
-        background-color: rgba(0,0,0,0.8);
-        padding: 0 1em;
-    }
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  #passages > div {
+      background-color: rgba(0,0,0,0.8);
+      padding: 0 1em;
   }
 }
 
@@ -117,4 +115,5 @@ $img-base: "https://go.cahoots.pl/syria/img";
 @include cover("transport-station-1");
 @include illustration("szam-street-1");
 @include cover("south-road-1");
+@include cover("desert-1");
 
