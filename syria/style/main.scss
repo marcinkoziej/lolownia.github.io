@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Star Medina";
+    src: url("https://go.cahoots.pl/syria/font/StarMedina.ttf");
+}
+
+
+/* fonts */
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4,
+nav#menu a
+{
+    font-family: "Star Medina", Impact, sans-serif;
+    font-weight: normal;
+}
+
+/* sizes */
+
+h1 {
+    font-size: 4em;
+}
+h2 {
+    font-size: 3em;
+}
+
+h3, #story-title {
+    font-size: 2em;
+}
+
+nav#menu a {
+    font-size: 1.4em;
+}
+
+/* positioning */
+html, body, #story {
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* colors */
+$brown-gold: #734F30;
+$brown-gold-lighter: lighten($brown-gold, 20%);
+$white-sky: #DCEAF2;
+$brown-dark: #070503;
+
+
+body {
+    background-color: $brown-dark;
+    color: $white-sky;
+}
+
+h1, h2, h3 {
+    text-shadow: 0px 0px 6px white;
+}
+
+#ui-bar {
+    background-color: #201c10;
+}
+
+#saves-list button,
+#saves-export,
+#saves-import
+  {
+  background-color: $brown-gold;
+  border: 1px solid $brown-gold-lighter;
+  }
+
+/* backgrounds */
+//$img-base: "///home/marcin/Projects/lolownia.github.io/syria/img";
+$img-base: "https://go.cahoots.pl/syria/img";
+
+
+/* horizontal */
+%horizontal-cover {
+  #story {
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    #passages > div {
+        background-color: rgba(0,0,0,0.8);
+        padding: 0 1em;
+    }
+  }
+}
+
+@mixin cover($name) {
+    #story.#{$name} {
+      @extend %horizontal-cover;
+      background-image: url("#{$img-base}/#{$name}.png");
+    }
+  }
+
+
+/* vertical */
+
+%vertical-illustration {
+    background-size: contain;
+    background-position: right top;
+    #passages {
+        margin: 0 auto 0 0;
+        max-width: 48em;
+    }
+}
+
+@mixin illustration($name) {
+  #story.#{$name} {
+    @extend %vertical-illustration;
+    background-image: url("#{$img-base}/#{$name}.png")
+    }
+  }
+
+@include cover("transport-station-1");
+@include illustration("szam-street-1");
+@include cover("south-road-1");
+
