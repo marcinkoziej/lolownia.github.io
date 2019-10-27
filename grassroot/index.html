@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>USSD Campaigning</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section data-background-image="img/gr-bg-overview.png" data-background-opacity="0.5">
+          <h1>USSD campaigning</h1>
+          <h2>Grassroot app</h2>
+        </section>
+        <section>
+          <h3>What is USSD?</h3>
+          <img class="fragment" src="img/how_ussd_works.jpg" />
+        </section>
+        <section>
+          <img src="img/flyer.jpg" />
+        </section>
+        <section>
+          <section data-background-iframe="img/gr-ussd-campaign.pdf" data-background-interactive>
+          </section>
+          <section data-background-iframe="img/gr-wa-campaign.pdf" data-background-interactive>
+          </section>
+        </section>
+        <section>
+          <img src="img/q.webp"/>
+        </section>
+
+        <!-- <section id="pdf1"> -->
+        <!-- <object data="img/gr-ussd-campaign.pdf" type="application/pdf" width="100%" height="100%" /> -->
+        <!-- </section> -->
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
