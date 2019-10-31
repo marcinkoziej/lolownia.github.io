@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Metabase as analytics app</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <h1>Metabase as analytics app</h1>
+          <p class="fragment"><i>as an alternative to monolithic apps</i></p>
+        </section>
+        <section data-markdown>
+          ## It can
+
+          - Create queries in UI or SQL
+          - Visualize results with a number of chart types
+          - Parametrize the charts
+          - Organize charts on dashboards and link them using filters
+        </section>
+        <section data-markdown>
+          ## It can't
+          - Read-Write
+          - Can't get OOB data
+        </section>
+        <section data-markdown>
+          ## Vision
+          - We create domain-specific chart types
+          - We build our dashboards from that
+          - We use a heroku-type CLI tool to export, import & share dashboards
+        </section>
+        <section data-background-video="img/metabase-hello-world.mp4" data-background-size="contain">
+        </section>
+        <section>
+          <pre ><code data-noescape style="font-size: 0.7em; line-height: 1.2em">
+import React, { Component } from "react";
+import cx from "classnames";
+
+import { t } from "ttag";
+import type { VisualizationProps } from "metabase/meta/types/Visualization";
+
+export default class HelloWorld extends Component {
+  props: VisualizationProps;
+
+  static uiName = t`Hello World`;
+  static identifier = "helloworld";
+  static iconName = "eye";
+
+  static minSize = { width: 3, height: 2 };
+
+  static isSensible({ cols, rows }) {
+    return cols.length == 1 && rows.length == 1;
+  }
+
+  static checkRenderable(series) {
+    const [{data}] = series;
+
+    if (!this.isSensible(data)) {
+      throw new Error(t`I like only one row with one column`);
+    }
+  }
+  render() {
+    return (
+            &lt;div className={cx(this.props.className, "flex layout-centered")}&gt;
+              &lt;h3&gt;Hello number {this.props.series[0].data.rows[0][0]}!&lt;/h3&gt;
+            &lt;/div&gt;
+    )
+  }
+}
+          </code></pre>
+        </section>
+        <section data-background-image="img/metabase-confidence.png" data-background-size="contain">
+        </section>
+        <section>
+          <h1>Thanks!</h1>
+        </section>
+        
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
