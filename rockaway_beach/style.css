@@ -1,0 +1,213 @@
+
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: bold;
+
+    /* colors */
+    background: white;
+    background-color: rgba(0,0,0,0.07);
+
+    /* layout */
+    margin: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: rgb(160,160,160);
+    text-decoration: none;
+}
+
+#main {
+    text-align: center;
+    margin: 0px auto;
+    width: 840px;
+}
+
+
+
+
+.caption {
+    font-size: 32pt;
+    font-weight: bold;
+}
+
+.vertical .picture {
+    /* 560 is the width of vertical picture */
+    margin-right: 340px; /* so we have 900 together */
+/*    float: left;*/
+}
+
+.vertical .picture img {
+    float: left;
+    max-height: 675px;
+}
+
+.textonly img {
+    display: none;
+}
+
+.textonly .caption {
+    margin-top: 200px;
+}
+
+.caption {
+    color: rgb(100, 100, 100);
+}
+
+.horizontal .caption {
+    clear: both;
+    padding: 10px 0px 0px 0px;
+}
+
+.vertical .caption {
+    margin-left: 460px;
+    width: 360px;
+    padding: 60px 0px 30px 0px;
+}
+
+/* Controls */
+
+.controls {
+    position: absolute;
+    margin: 0px auto;
+    top: 260px;
+    width: 840px;
+}
+
+.prev {
+    float: left;
+    position: relative;
+    left: -60px;
+}
+.next {
+    float: right;
+    position: relative;
+    right: -60px;
+}
+
+
+/* .vertical #controls { */
+/*     margin-left: 560px; */
+/* } */
+
+/*.verical .prev, .vertical .next {
+    float: none;
+}
+*/
+
+
+.button { 
+    color: rgb(150,150,150);
+    font-size: 42pt;
+    display: inline-block;
+}
+
+.rotated{
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+}
+
+
+
+/* loading */
+
+.loading #main {
+    display: none;
+}
+
+#loading {
+    display: none;
+}
+
+.loading #loading {
+    min-height: 800px;
+    color: white;
+    font-weight: bold;
+    font-size: 32pt;
+    display: block;
+    background-image: url('pictures/frontpage-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    padding-top: 300px;
+}
+
+div.title {
+    display:inline-block;
+    margin-left: 30%;
+    padding: 20px;
+    background-color: rgba(0,0,0, 0.4);
+
+}
+
+.circle {
+    padding-top: 3px;
+    text-align: center;
+    vertical-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    width: 60px;
+    height: 57px; 
+    background-color: #2850AD;
+}
+
+
+
+/*
+#image-list {
+    display:none;
+}
+
+#foto-box {
+    width: 1000px;
+    margin: 0px auto;
+    position: relative;
+}
+
+
+#foto {
+
+}
+
+#caption {
+    width: 1000px;
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    margin: 0px auto;
+    font-size: 24pt;
+    color: white;
+}
+
+.button {
+    padding-top: 6px;
+    position: fixed;
+    width: 30px;
+    height: 25px;
+    color: #dddddd;
+    cursor: pointer;
+}
+
+.button.hl {
+    color: black;
+    background: #dddddd;
+}
+
+.next {
+    top: 10px;
+    right: 20px;
+}
+
+.prev {
+    top: 10px;
+    right: 60px;
+}
+
+.big-label {
+    color: white;
+    text-align: center;
+    font-size: 56pt;
+    padding-top: 200px;
+}*/
