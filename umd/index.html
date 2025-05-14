@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2><del style="color: #ff033e">Love</del> is all you need</h2>
+					<h2><del style="color: #ff033e">Attention</del> is all you need</h2>
+					<h2><span style="color: #ff033e">Love</span> is all you need</h2>
+
+					<p>Marcin Koziej</p>
+				</section>
+
+				<section>
+					<h1>Attention is all you need</h1>
+					<img src="attention-is-all.png" width="60%"/>
+				</section>
+
+				<section>
+				  <blockquote style="font-size: 50%">
+Myślę więc, że w ciągu ostatnich 10 lat nauczyliśmy się, że jeśli
+weźmiesz system z miliardami parametrów i funkcją celu - taką jak
+wypełnienie luki w ciągu słów - działa on znacznie lepiej niż powinien.
+Działa znacznie lepiej, niż można by się spodziewać. Można by pomyśleć,
+i większość ludzi w konwencjonalnej AI tak myślała, że gdy weźmiemy
+system z miliardem parametrów, zaczynając od losowych wartości wag,
+następnie zmierzymy gradient funkcji celu - to znaczy dla każdego
+parametru sprawdzimy, jak zmieni się funkcja celu i trochę ten parametr
+zmienimy w pożądanym kierunku, to rodzaj beznadziejnego algorytmu, który
+na pewno gdzieś utknie.< Okazuje się jednak, że to naprawdę dobry
+algorytm. A im większa jest skala takiej sieci, tym lepiej działa. Jest
+to po prostu empiryczne odkrycie. Jest w nim trochę teorii, ale
+zasadniczo jest to empiryczne odkrycie.
+
+
+
+					</blockquote>
+					
+					<img src="hinton.png" width="60%">
+
+				</section>
+
+				<section>
+				  <h1>Język</h1>
+					<img src="drzewo.png"/>
+
+				</section>
+
+				<section>
+				  <h1>Język</h1>
+
+					<img src="drzwi.png"/>
+				</section>
+
+				<section>
+					<h1>Language modelling is compression</h1>
+					<img src="llm-is-compression.png" width="60%"/>
+				</section>
+
+				<section>
+				  <blockquote style="font-size: 50%">
+
+Nie ma innego sposobu by wyobrazić sobie niezniszczalność nieświadomego pragnienia –
+skoro nie jest ono potrzebą, .... To w pewnym
+rodzaju pamięci, porównywalnej do elementu tak samo zwanego w naszych nowoczesnych
+maszynach-do-myślenia (opartych na elektronicznej realizacji kompozycji znaczącej), znajduje się
+łańcuch napierający na powielenie siebie w przeniesieniu, i będący łańcuchem martwego
+pragnienia.
+					</blockquote>
+				</section>
+
+				
+			
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
